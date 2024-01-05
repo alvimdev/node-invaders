@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Node Invaders</title>
+    <script src="script.js"></script>
+</head>
+<body style="align-items: center; justify-content: center; text-align: center">
+    <img src="assets/logo.png" alt="">
+    <ul class="menu">
+        <li><button onclick="window.location.href='game/game.html'" class="btnsel">PLAY</button></li>
+        <li><button onclick="OC('rank')" class="btnsel">RANK</button></li>
+        <li><button onclick="OC('about')" class="btnsel">ABOUT</button></li>
+    </ul>
+    <article id="rank">
+        <div id="close-rank" onclick="hide('rank')"><img src="assets/x.png" height="15px"></div>
+        <table id="rank-table">
+            
+        </table>
+    </article>
+    <article id="about">
+        <div id="close-about" onclick="hide('about')"><img src="assets/x.png" height="15px"></div>
+    </article>
+</body>
+</html>

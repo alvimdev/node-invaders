@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('assets/background.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    margin-top: 20px;
+}
+
+.btnsel {
+    width: 300px;
+    height: 100px;
+    padding: 10px 20px;
+    background-color: #73cc58;
+    color: #0a0a0a;
+    font-family: 'Rubik Glitch', sans-serif;
+    border-style: none;
+    border-radius: 20px 2px 20px 2px;
+    text-decoration: none;
+    font-size: 33px;
+    cursor: pointer;
+    transition: 700ms;
+}
+
+.btnsel:hover {
+    transition: 700ms;
+    transform: scale(1.1);
+}
+
+article {
+    display: none;
+    position: fixed;
+    background-color: #222;
+    color: #ddd;
+    width: 40%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#close-rank, #close-about {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+#close-rank:hover, #close-about:hover {
+    transition: 400ms;
+    transform: scale(1.13);
+}
+
+#rank-table {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#rank-table th, #rank-table td {
+    border: none;
+    padding: 15px; /* Aumentei o padding para dar mais espaço */
+    text-align: center;
+    font-size: 25px;
+}
+
+#rank-table th {
+    font-size: 35px; /* Tamanho do título maior */
+    color: #73cc58; /* Cor verde */
+}
