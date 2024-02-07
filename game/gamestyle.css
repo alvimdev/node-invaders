@@ -1,3 +1,55 @@
-body{
+* { margin: 0; padding: 0; }
+
+#game-over {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    z-index: 999; /* Para garantir que a div fique acima de outros elementos */
+}
+
+#game-over h1 {
+    margin-top: 0;
+}
+
+#game-over .button-container {
+    margin-top: 20px;
+}
+
+#game-over .button-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#game-over .button-container button:hover {
+    background-color: #45a049;
+}
+
+.score {
+    position: fixed;
+    z-index: 10;
+    color: antiquewhite;
+    left: 5px;
+    bottom: 2px;
     margin: 0;
+    font-family: Ubuntu, sans-serif;
+
+    #label-s {
+        color: #08ff14;
+    }
+
+    #score {
+        color: bisque;
+    }
 }

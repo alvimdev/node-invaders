@@ -1,3 +1,20 @@
-<link rel="stylesheet" href="gamestyle.css">
-<canvas></canvas>
+<head>
+    <link rel="shortcut icon" href="../assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="gamestyle.css">
+    <title>Node Invaders</title>
+</head>
+<div id="game-over">
+    <h1>Game Over</h1>
+    <input id="username-input" type="text" placeholder="Enter ur Nick">
+    <div class="button-container">
+        <button id="restart-button" onclick="restart()">Restart</button>
+        <button id="back-button" onclick="back()">Back</button>
+    </div>
+</div>
+<p class="score">
+    <span id="label-s">Score: </span>
+    <span id="score-s">0</span>
+</p>
+<canvas>
+</canvas>
 <script src="gamescript.js"></script>
