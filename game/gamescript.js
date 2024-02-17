@@ -399,6 +399,7 @@ function restart() {
     var gameOverDiv = document.getElementById("game-over")
     gameOverDiv.style.display = "none"
 
+    save()
     
     isGamePaused = false;
 
@@ -406,6 +407,11 @@ function restart() {
 }
 
 function back() {
+    save()
+    window.location.href = "../index.html"
+}
+
+function save() {
     const nick = document.getElementById("username-input").value;
 
     // Verifica se o nome de usuário não está vazio
@@ -416,29 +422,27 @@ function back() {
 
     // Verifica se a pontuação é um número válido
     if (isNaN(score)) {
-        alert("Please enter a valid score");
+        alert("Invalid score.");
         return;
     }
 
     // Verifica se o navegador suporta o armazenamento local
     if (typeof(Storage) !== "undefined") {
         // Recupera os dados do armazenamento local ou inicializa um novo objeto vazio
-        const userData = JSON.parse(localStorage.getItem("userData")) || {};
+        const userData = JSON.parse(localStorage.getItem("userData")) || {}
 
         // Adiciona a pontuação ao objeto de dados do usuário
-        userData[nick] = score;
+        if(userData[nick] < score)
+            userData[nick] = score
+        else alert("Low score detected, maintaining the previous one")
 
         // Salva os dados atualizados de volta no armazenamento local
-        localStorage.setItem("userData", JSON.stringify(userData));
+        localStorage.setItem("userData", JSON.stringify(userData))
 
-        console.log('Pontuação adicionada com sucesso.');
-
-        // Redireciona para a página inicial
-        //window.location.href = "../index.html";
+        console.log('Pontuação adicionada com sucesso.')
     } else {
         // Caso o navegador não suporte o armazenamento local
-        alert("Sorry, your browser does not support web storage...");
+        alert("Sorry, your browser does not support web storage...")
+        return;
     }
 }
-
-
