@@ -400,6 +400,8 @@ function restart() {
     gameOverDiv.style.display = "none"
 
     save()
+
+    score = 0;
     
     isGamePaused = false;
 
