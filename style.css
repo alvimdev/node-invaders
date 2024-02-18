@@ -51,9 +51,39 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    #shop {
+        width: 50%;
+        color: azure;
+    }
 }
 
-#close-rank, #close-about {
+.items {
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item{
+    width: 45%;
+    margin-bottom: 10px;
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+    -webkit-transition: 500ms;
+}
+
+.item:hover {
+    -webkit-transition: 500ms;
+    transform: scale(1.17);
+}
+
+#close-rank, #close-shop {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -61,7 +91,7 @@ article {
     transition: 400ms;
 }
 
-#close-rank:hover, #close-about:hover {
+#close-rank:hover, #close-shop:hover {
     transition: 400ms;
     transform: scale(1.13);
 }
@@ -80,7 +110,10 @@ article {
     font-size: 25px;
 }
 
-#rank-table th {
+#rank-table th, .shop-ttl {
     font-size: 35px; /* Tamanho do título maior */
     color: #73cc58; /* Cor verde */
+    
+    font-family: "Comic Neue", cursive; 
+    font-weight: 700;
 }

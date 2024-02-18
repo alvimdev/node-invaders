@@ -1,6 +1,9 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
+const profile = JSON.parse(localStorage.getItem("profile")) || {}
+console.log(profile)
+
 const score_s = document.querySelector('#score-s')
 console.log(score_s)
 
@@ -175,7 +178,7 @@ class Player {
         this.rotation = 0
 
         const img = new Image()
-        img.src = '../assets/spaceship.png'
+        img.src = profile.skin
         img.onload = () => {
             const scale = 25/100
             this.img = img
@@ -243,7 +246,7 @@ class Projectile {
     draw(){
         c.beginPath()
         c.arc(this.pos.x, this.pos.y, this.radius, 0, Math.PI * 2)
-        c.fillStyle = '#0bda51'
+        c.fillStyle = profile.color
         c.fill()
         c.closePath()
     }

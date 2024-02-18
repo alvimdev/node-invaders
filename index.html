@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Karla&family=Rubik+Glitch&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Node Invaders</title>
     <script src="script.js"></script>
@@ -16,7 +17,7 @@
     <ul class="menu">
         <li><button onclick="window.location.href='game/game.html'" class="btnsel">PLAY</button></li>
         <li><button onclick="OC('rank')" class="btnsel">RANK</button></li>
-        <li><button onclick="OC('about')" class="btnsel">ABOUT</button></li>
+        <li><button onclick="OC('shop')" class="btnsel">SHOP</button></li>
     </ul>
     <article id="rank">
         <div id="close-rank" onclick="hide('rank')"><img src="assets/x.png" height="15px"></div>
@@ -24,8 +25,15 @@
             
         </table>
     </article>
-    <article id="about">
-        <div id="close-about" onclick="hide('about')"><img src="assets/x.png" height="15px"></div>
+    <article id="shop">
+        <div id="close-shop" onclick="hide('shop')"><img src="assets/x.png" height="15px"></div>
+        <p class="shop-ttl">Shop</p>
+        <div class="items">
+            <div class="item" id="s0" onclick="select('s0')"><img src="./assets/spaceship0.png"></div>
+            <div class="item" id="s1" onclick="select('s1')"><img src="./assets/spaceship1.png"></div>
+            <div class="item" id="s2" onclick="select('s2')"><img src="./assets/spaceship2.png"></div>
+            <div class="item" id="s3" onclick="select('s3')"><img src="./assets/spaceship3.png"></div>
+        </div>
     </article>
 </body>
 </html>
