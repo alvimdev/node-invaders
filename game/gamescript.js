@@ -431,11 +431,16 @@ function save() {
         // Recupera os dados do armazenamento local ou inicializa um novo objeto vazio
         const userData = JSON.parse(localStorage.getItem("userData")) || {}
 
-        // Adiciona a pontuação ao objeto de dados do usuário
-        if(userData[nick] < score)
-            userData[nick] = score
-        else alert("Low score detected, maintaining the previous one")
+        console.log(userData[nick])
 
+        if (userData[nick] !== undefined) {
+            // Adiciona a pontuação ao objeto de dados do usuário
+            if(userData[nick] < score)
+                userData[nick] = score
+            else alert("Low score detected, maintaining the previous one")
+        } else
+            userData[nick] = score
+        
         // Salva os dados atualizados de volta no armazenamento local
         localStorage.setItem("userData", JSON.stringify(userData))
 
