@@ -178,7 +178,7 @@ class Player {
         this.rotation = 0
 
         const img = new Image()
-        img.src = profile.skin
+        img.src = profile.s == undefined ? '../assets/spaceship0.png' : profile.skin
         img.onload = () => {
             const scale = 25/100
             this.img = img
@@ -246,14 +246,14 @@ class Projectile {
     draw(){
         c.beginPath()
         c.arc(this.pos.x, this.pos.y, this.radius, 0, Math.PI * 2)
-        c.fillStyle = profile.color
+        c.fillStyle = profile.s == undefined ? '#0bda51' : profile.color
         c.fill()
         c.closePath()
     }
 
     update() {
         this.draw();
-        if (this.vel) { // Verifica se 'this.vel' está definido
+        if (this.vel) {
             this.pos.x += this.vel.x;
             this.pos.y += this.vel.y;
         }
