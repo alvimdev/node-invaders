@@ -75,7 +75,7 @@ article {
         height: 100%;
     }
 
-    -webkit-transition: 500ms;
+    -webkit-transition: 300ms;
 }
 
 .item:hover {

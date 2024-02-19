@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; }
 
-#game-over {
+#game-over, #pause-screen {
     display: none;
     position: fixed;
     top: 50%;
@@ -14,15 +14,33 @@
     z-index: 999; /* Para garantir que a div fique acima de outros elementos */
 }
 
-#game-over h1 {
+#game-over h1, #pause-screen h1 {
     margin-top: 0;
 }
 
-#game-over .button-container {
+#username-input {
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color: rgba(218, 218, 218, 0.541);
+    opacity: 50%;
+    font-family: Ubuntu, sans-serif;
+    border: none;
+    color: cornsilk;
+}
+
+#username-input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#username-input::placeholder{
+    color: cornsilk;
+}
+
+.button-container {
     margin-top: 20px;
 }
 
-#game-over .button-container button {
+.button-container button {
     margin: 0 10px;
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -32,7 +50,7 @@
     cursor: pointer;
 }
 
-#game-over .button-container button:hover {
+.button-container button:hover {
     background-color: #45a049;
 }
 

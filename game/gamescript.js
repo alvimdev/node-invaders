@@ -360,6 +360,18 @@ function animate() {
 
 animate()
 
+function Pause() {
+    var pauseDiv = document.getElementById("pause-screen")
+    pauseDiv.style.display = "block"
+    
+    isGamePaused = !isGamePaused
+
+    if(!isGamePaused){
+        pauseDiv.style.display= "none"
+        requestAnimationFrame(animate)
+    }
+}
+
 addEventListener('keydown', ({ key }) => { 
     if(key == 'a' || key == 'ArrowLeft')
         keys.l.pressed = true
@@ -369,6 +381,8 @@ addEventListener('keydown', ({ key }) => {
         shoot()
     else if(key == ' ' || key == '0')
         shoot()
+    else if(key == 'Escape')
+        Pause()
 })
 
 addEventListener('keyup', ({ key }) => { 
@@ -387,8 +401,6 @@ function gameover() {
 
     var gameOverDiv = document.getElementById("game-over")
     gameOverDiv.style.display = "block"
-
-    //cancelAnimationFrame(gameInterval)
 }
 
 function restart() {
