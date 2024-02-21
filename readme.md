@@ -57,4 +57,4 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 </table>
 
 ## 
-[⬆ Voltar ao topo](#node-invaders)<br>
+[⬆ Voltar ao topo](#node-invaders-)<br>
